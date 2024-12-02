@@ -20,7 +20,7 @@
     <div class="header clearfix">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li class="active" id="home"><a href="#">Home</a></li>
+                <li id="home" class="active"><a href="#">Home</a></li>
                 <li id="qsLogoutBtn"><a href="#">Logout</a></li>
             </ul>
         </nav>
@@ -36,6 +36,7 @@
         $("#qsLogoutBtn").addClass("active");
         // assumes we are not part of SSO so just logout of local session
         window.location = "${fn:replace(pageContext.request.requestURL, pageContext.request.requestURI, '')}/logout";
+
     });
 </script>
 
